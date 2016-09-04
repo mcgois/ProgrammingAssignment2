@@ -1,8 +1,8 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
-
+## Creates a data sctructure that caches inverse matrix when inversion 
+## is called for the first time (by function cacheSolve).
 makeCacheMatrix <- function(x = matrix()) {
   inverseMatrix <- NULL
   
@@ -22,8 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## Resolves the inverse matrix from the structured matrix (makeCacheMatrix)
+## The first time the inversion is called, it will store the inverse matrix.
+## Following calls will return cached results.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
     inverseMatrix <- x$getInverseMatrix()
